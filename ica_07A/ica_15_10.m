@@ -16,5 +16,6 @@ heaviestCone=max(mass(1:5));
 lightestCone=min(mass(1:5));
 [heaviestCone,I]=max(mass(:));
 heavyHt=ht(I);
+heavyDiam=diam(I);
 
-fprintf('The heaviest cone was %f kg and has a height of %f meters',heaviestCone, heavyHt);
+fprintf('The heaviest cone was %f kg and has a height of %f meters, and a diameter of %f meters\n',heaviestCone, heavyHt, heavyDiam);
