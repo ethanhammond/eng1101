@@ -1,0 +1,10 @@
+clear
+[nums,txt]=xlsread('Mistakes!.xlsx');
+dates=nums(:,1);
+snowfall=nums(:,2);
+onGround=nums(:,3);
+month=nums(:,4);
+season=nums(:,5);
+
+minGround = min(onGround);
+maxGround = max(onG
