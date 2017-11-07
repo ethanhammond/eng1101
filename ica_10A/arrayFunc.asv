@@ -1,0 +1,41 @@
+function [totalProfit,totalWood,totalLabor] = arrayFunc(inputArray,costWood,costLabor)
+%ARRAYFUNC Determines total profit, total wood used, and total number of
+%hours for the order
+
+allData=[145,130,95,55;12,9,7,5;750,520,340,177];
+
+diningTableAmt=inputArray(1);
+deskAmt=inputArray(2);
+coffeeTableAmt=inputArray(3);
+endTableAmt=inputArray(4);
+
+diningTableWood=diningTableAmt*allData(1,1);
+diningTableWoodCost=diningTableWood*costWood;     %allData(1,1) refers to amt of wood needed per table
+diningTableLabor=diningTableAmt*allData(2,1);
+diningTableLaborCost=diningTableLabor*costLabor;    %allData(2,1) refers to amt of labor needed per table
+diningTableProfit=(allData(3,1)-(diningTableWoodCost+diningTableLaborCost))*diningTableAmt;
+
+deskWood=deskAmt*allData(1,2);
+deskWoodCost=deskWood*costWood;
+deskLabor=deskAmt*allData(2,2);
+deskLaborCost=deskLabor*costLabor;
+deskProfit=(allData(3,2)*coffeeTableAmt)-(coffeeTableWoodCost+coffeeTableLaborCost);
+
+coffeeTableWood=coffeeTableAmt*allData(1,3);
+coffeeTableWoodCost=coffeeTableWood*costWood;
+coffeeTableLabor=coffeeTableAmt*allData(2,3);
+coffeeTableLaborCost=coffeeTableLabor*costLabor;
+coffeeTableProfit=(allData(3,3)*coffeeTableAmt)-(coffeeTableWoodCost+coffeeTableLaborCost);
+
+endTableWood=endTableAmt*allData(1,4);
+endTableWoodCost=endTableWood*costWood;
+endTableLabor=endTableAmt*allData(2,4);
+endTableLaborCost=endTableLabor*costLabor;
+endTableProfit=(allData(3,4)-(endTableWoodCost+endTableLaborCost))*endTableAmt;
+
+totalProfit=diningTableProfit+deskProfit+coffeeTableProfit+endTableProfit;
+totalWood=diningTableWood+deskWood+coffeeTableWood+endTableWood;
+totalLabor=diningTableLabor+deskLabor+coffeeTableLabor+endTableLabor;
+
+end
+
