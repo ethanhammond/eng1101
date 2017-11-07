@@ -6,7 +6,15 @@ function [totalProfit,totalWood,totalLabor] = arrayFunc(inputArray,costWood,cost
 % All data could be loaded from spreadsheet for even more realistic
 % example.
 
-allData=[145,130,95,55;12,9,7,5;750,520,340,177];
+%Row one of the excel spreadsheet refers to square feet of wood per object
+%Row two of the excel spreadsheet refers to the hours of labor per object
+%Row three of the excel spreadhsset refers to the selling price of the
+%object
+%Dining tables, desks, coffee tables, end tables
+
+excelData=xlsread('allData.xlsx');
+
+allData=[excelData];
 
 diningTableAmt=inputArray(1);
 deskAmt=inputArray(2);

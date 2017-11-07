@@ -1,4 +1,4 @@
-function [totalVol1, totalVol2,difference] = examFunction(vol1,vol2)
+function [totalVol1,totalVol2,difference] = examFunction(vol1,vol2)
 %EXAMFUNCTION This function determines the total volume of each month of
 %data and the difference between the two totals.
 %   Returns flow data from lake oroville

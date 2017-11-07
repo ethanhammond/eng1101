@@ -1,6 +1,10 @@
 % 10A
 % Ethan Hammond
 
+% Determines the numbers associated with the order
+
+clc, clear
+
 a=input('Please enter the amount of dining tables in the order\n');
 b=input('Please enter the amount of desks in the order\n');
 c=input('Please enter the amount of coffee tables in the order\n');
