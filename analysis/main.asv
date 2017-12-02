@@ -105,9 +105,7 @@ for i = 1:1:length(weatherRaw)
 end
 fprintf('END ERROR LOG\n');
 
-% Calculate time step
+%VC
 for i=2:1:length(time)
-    %Note: This time step remains the same for all iterations
     dt=time(i)-time(i-1);
 end
-
